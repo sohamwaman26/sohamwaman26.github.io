@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <meta name="description"
+
+        content="Soham Waman — AI/ML Engineer and Computer Engineering Student">
+
+
+
+  <title>Soham Waman — AI/ML Engineer</title>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+
+        rel="stylesheet">
+
+
+
+  <style>
+
+
+
+    :root {
+
+      --bg: #070707;
+
+      --panel: #101010;
+
+      --line: #242424;
+
+      --text: #f4f4f4;
+
+      --muted: #8e8e8e;
+
+    }
+
+
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: Inter, Arial, sans-serif;
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+
+    }
+
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+
+    .container {
+
+      width: min(1160px, calc(100% - 40px));
+
+      margin: auto;
+
+    }
+
+
+
+    /* NAVBAR */
+
+
+
+    nav {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      z-index: 50;
+
+
+
+      background: rgba(7,7,7,.78);
+
+      backdrop-filter: blur(16px);
+
+
+
+      border-bottom: 1px solid rgba(255,255,255,.06);
+
+    }
+
+
+
+    .nav-inner {
+
+      height: 74px;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+
+    .brand {
+
+      font-family: "Space Grotesk";
+
+      font-weight: 700;
+
+      letter-spacing: -.04em;
+
+      font-size: 20px;
+
+    }
+
+
+
+    .brand span {
+
+      color: #777;
+
+    }
+
+
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 30px;
+
+
+
+      color: #aaa;
+
+      font-size: 14px;
+
+    }
+
+
+
+    .nav-links a:hover {
+
+      color: white;
+
+    }
+
+
+
+    .nav-cta {
+
+      border: 1px solid #3a3a3a;
+
+      padding: 9px 15px;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+    }
+
+
+
+    /* HERO */
+
+
+
+    .hero {
+
+      min-height: 100vh;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+
+
+      padding-top: 74px;
+
+
+
+      position: relative;
+
+    }
+
+
+
+    .hero:before {
+
+      content: "";
+
+
+
+      position: absolute;
+
+
+
+      width: 600px;
+
+      height: 600px;
+
+
+
+      border-radius: 50%;
+
+
+
+      background:
+
+        radial-gradient(
+
+          circle,
+
+          rgba(255,255,255,.07),
+
+          transparent 65%
+
+        );
+
+
+
+      top: 10%;
+
+      right: -220px;
+
+
+
+      pointer-events: none;
+
+    }
+
+
+
+    .eyebrow {
+
+      color: #aaa;
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+
+    }
+
+
+
+    .dot {
+
+      display: inline-block;
+
+
+
+      width: 7px;
+
+      height: 7px;
+
+
+
+      border-radius: 50%;
+
+
+
+      background: white;
+
+
+
+      margin-right: 9px;
+
+
+
+      box-shadow: 0 0 16px white;
+
+    }
+
+
+
+    h1 {
+
+      font-family: "Space Grotesk";
+
+
+
+      font-size: clamp(64px, 11vw, 148px);
+
+
+
+      line-height: .82;
+
+
+
+      letter-spacing: -.075em;
+
+
+
+      max-width: 1000px;
+
+    }
+
+
+
+    h1 .outline {
+
+      color: transparent;
+
+
+
+      -webkit-text-stroke: 1px #666;
+
+    }
+
+
+
+    .hero-sub {
+
+      max-width: 680px;
+
+
+
+      color: #a2a2a2;
+
+
+
+      font-size: 18px;
+
+
+
+      margin-top: 38px;
+
+    }
+
+
+
+    .hero-actions {
+
+      display: flex;
+
+
+
+      gap: 12px;
+
+
+
+      margin-top: 28px;
+
+
+
+      flex-wrap: wrap;
+
+    }
+
+
+
+    .btn {
+
+      padding: 13px 20px;
+
+
+
+      border-radius: 999px;
+
+
+
+      border: 1px solid #333;
+
+
+
+      font-size: 14px;
+
+
+
+      transition: .25s;
+
+    }
+
+
+
+    .btn.primary {
+
+      background: white;
+
+      color: black;
+
+      border-color: white;
+
+    }
+
+
+
+    .btn:hover {
+
+      transform: translateY(-2px);
+
+    }
+
+
+
+    .scroll {
+
+      position: absolute;
+
+
+
+      bottom: 28px;
+
+
+
+      left: 0;
+
+
+
+      color: #666;
+
+
+
+      font-size: 11px;
+
+
+
+      letter-spacing: .2em;
+
+    }
+
+
+
+    /* SECTIONS */
+
+
+
+    section {
+
+      padding: 110px 0;
+
+
+
+      border-top: 1px solid var(--line);
+
+    }
+
+
+
+    .section-label {
+
+      font-size: 12px;
+
+
+
+      text-transform: uppercase;
+
+
+
+      letter-spacing: .2em;
+
+
+
+      color: #666;
+
+
+
+      margin-bottom: 25px;
+
+    }
+
+
+
+    .section-title {
+
+      font-family: "Space Grotesk";
+
+
+
+      font-size: clamp(40px, 6vw, 76px);
+
+
+
+      letter-spacing: -.06em;
+
+
+
+      line-height: 1;
+
+    }
+
+
+
+    /* ABOUT */
+
+
+
+    .about-grid {
+
+      display: grid;
+
+
+
+      grid-template-columns: 1.1fr .9fr;
+
+
+
+      gap: 80px;
+
+
+
+      align-items: start;
+
+    }
+
+
+
+    .about-copy {
+
+      font-size: 20px;
+
+
+
+      color: #b4b4b4;
+
+
+
+      max-width: 650px;
+
+    }
+
+
+
+    .about-copy p + p {
+
+      margin-top: 22px;
+
+    }
+
+
+
+    .stats {
+
+      display: grid;
+
+
+
+      grid-template-columns: 1fr 1fr;
+
+
+
+      gap: 1px;
+
+
+
+      background: var(--line);
+
+
+
+      border: 1px solid var(--line);
+
+    }
+
+
+
+    .stat {
+
+      background: var(--bg);
+
+
+
+      padding: 28px;
+
+    }
+
+
+
+    .stat strong {
+
+      font-family: "Space Grotesk";
+
+
+
+      font-size: 40px;
+
+
+
+      display: block;
+
+    }
+
+
+
+    .stat span {
+
+      font-size: 12px;
+
+
+
+      color: #777;
+
+
+
+      text-transform: uppercase;
+
+
+
+      letter-spacing: .12em;
+
+    }
+
+
+
+    /* TECHNOLOGY TICKER */
+
+
+
+    .ticker {
+
+      overflow: hidden;
+
+
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+
+
+      padding: 22px 0;
+
+
+
+      margin: 75px 0 0;
+
+    }
+
+
+
+    .ticker-track {
+
+      display: flex;
+
+
+
+      width: max-content;
+
+
+
+      animation: marquee 28s linear infinite;
+
+    }
+
+
+
+    .ticker-item {
+
+      font-family: "Space Grotesk";
+
+
+
+      font-size: 18px;
+
+
+
+      color: #aaa;
+
+
+
+      margin-right: 42px;
+
+
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .ticker-item:after {
+
+      content: "✦";
+
+
+
+      margin-left: 42px;
+
+
+
+      color: #444;
+
+    }
+
+
+
+    @keyframes marquee {
+
+      to {
+
+        transform: translateX(-50%);
+
+      }
+
+    }
+
+
+
+    /* CARDS */
+
+
+
+    .cards {
+
+      display: grid;
+
+
+
+      grid-template-columns: repeat(3, 1fr);
+
+
+
+      gap: 14px;
+
+
+
+      margin-top: 50px;
+
+    }
+
+
+
+    .card {
+
+      min-height: 220px;
+
+
+
+      background: var(--panel);
+
+
+
+      border: 1px solid #202020;
+
+
+
+      border-radius: 18px;
+
+
+
+      padding: 27px;
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+      justify-content: space-between;
+
+
+
+      transition: .25s;
+
+    }
+
+
+
+    .card:hover {
+
+      border-color: #4a4a4a;
+
+
+
+      transform: translateY(-4px);
+
+    }
+
+
+
+    .card-num {
+
+      color: #555;
+
+
+
+      font-size: 12px;
+
+    }
+
+
+
+    .card h3 {
+
+      font-family: "Space Grotesk";
+
+
+
+      font-size: 27px;
+
+
+
+      margin: 25px 0 8px;
+
+    }
+
+
+
+    .card p {
+
+      color: #888;
+
+
+
+      font-size: 14px;
+
+    }
+
+
+
+    .launch {
+
+      font-size: 13px;
+
+
+
+      color: #ccc;
+
+    }
+
+
+
+    /* CONTACT */
+
+
+
+    .contact-grid {
+
+      display: grid;
+
+
+
+      grid-template-columns: 1fr 1fr;
+
+
+
+      gap: 80px;
+
+    }
+
+
+
+    .contact-copy {
+
+      color: #888;
+
+
+
+      font-size: 18px;
+
+
+
+      max-width: 470px;
+
+
+
+      margin-top: 25px;
+
+    }
+
+
+
+    .contact-links {
+
+      margin-top: 32px;
+
+
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+      gap: 10px;
+
+    }
+
+
+
+    .contact-links a {
+
+      color: #ddd;
+
+    }
+
+
+
+    form {
+
+      display: flex;
+
+
+
+      flex-direction: column;
+
+
+
+      gap: 14px;
+
+    }
+
+
+
+    input,
+
+    textarea {
+
+      width: 100%;
+
+
+
+      background: #0c0c0c;
+
+
+
+      border: 1px solid #292929;
+
+
+
+      color: white;
+
+
+
+      padding: 15px 16px;
+
+
+
+      border-radius: 10px;
+
+
+
+      font: inherit;
+
+
+
+      outline: none;
+
+    }
+
+
+
+    input:focus,
+
+    textarea:focus {
+
+      border-color: #777;
+
+    }
+
+
+
+    textarea {
+
+      min-height: 160px;
+
+
+
+      resize: vertical;
+
+    }
+
+
+
+    /* FOOTER */
+
+
+
+    footer {
+
+      border-top: 1px solid var(--line);
+
+
+
+      padding: 30px 0;
+
+
+
+      color: #555;
+
+
+
+      font-size: 13px;
+
+    }
+
+
+
+    /* ANIMATION */
+
+
+
+    .reveal {
+
+      opacity: 0;
+
+
+
+      transform: translateY(22px);
+
+
+
+      transition: .7s ease;
+
+    }
+
+
+
+    .reveal.show {
+
+      opacity: 1;
+
+
+
+      transform: none;
+
+    }
+
+
+
+    /* MOBILE */
+
+
+
+    @media(max-width:800px) {
+
+
+
+      .nav-links {
+
+        display: none;
+
+      }
+
+
+
+      .nav-cta {
+
+        display: none;
+
+      }
+
+
+
+      .hero {
+
+        min-height: 88vh;
+
+      }
+
+
+
+      h1 {
+
+        font-size: clamp(58px, 18vw, 105px);
+
+      }
+
+
+
+      .about-grid,
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+
+
+        gap: 40px;
+
+      }
+
+
+
+      .cards {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      section {
+
+        padding: 80px 0;
+
+      }
+
+    }
+
+
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <!-- NAVBAR -->
+
+
+
+  <nav>
+
+
+
+    <div class="container nav-inner">
+
+
+
+      <a class="brand" href="#home">
+
+        SW<span>.</span>
+
+      </a>
+
+
+
+      <div class="nav-links">
+
+
+
+        <a href="#home">Home</a>
+
+
+
+        <a href="#about">About</a>
+
+
+
+        <a href="#ecosystem">Ecosystem</a>
+
+
+
+        <a href="#projects">Projects</a>
+
+
+
+        <a href="#contact">Contact</a>
+
+
+
+      </div>
+
+
+
+      <a class="nav-cta" href="#contact">
+
+        Let's Talk ↗
+
+      </a>
+
+
+
+    </div>
+
+
+
+  </nav>
+
+
+
+
+
+  <!-- HERO -->
+
+
+
+  <section class="hero" id="home">
+
+
+
+    <div class="container">
+
+
+
+      <div class="eyebrow">
+
+
+
+        <span class="dot"></span>
+
+
+
+        Available for projects & opportunities
+
+
+
+      </div>
+
+
+
+      <h1>
+
+        Soham<br>
+
+        <span class="outline">Waman</span>
+
+      </h1>
+
+
+
+      <p class="hero-sub">
+
+        AI/ML Engineer • Full Stack Developer •
+
+        Computer Engineering Student
+
+      </p>
+
+
+
+      <div class="hero-actions">
+
+
+
+        <a class="btn primary" href="#projects">
+
+          Explore My Work ↗
+
+        </a>
+
+
+
+        <a class="btn" href="#contact">
+
+          Get In Touch
+
+        </a>
+
+
+
+      </div>
+
+
+
+      <div class="scroll">
+
+        SCROLL TO EXPLORE ↓
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- TECHNOLOGY TICKER -->
+
+
+
+  <div class="ticker">
+
+
+
+    <div class="ticker-track">
+
+
+
+      <span class="ticker-item">Python</span>
+
+
+
+      <span class="ticker-item">Machine Learning</span>
+
+
+
+      <span class="ticker-item">AWS</span>
+
+
+
+      <span class="ticker-item">DynamoDB</span>
+
+
+
+      <span class="ticker-item">SQL</span>
+
+
+
+      <span class="ticker-item">Power BI</span>
+
+
+
+      <span class="ticker-item">C</span>
+
+
+
+      <span class="ticker-item">JavaScript</span>
+
+
+
+      <span class="ticker-item">Git</span>
+
+
+
+      <span class="ticker-item">Python</span>
+
+
+
+      <span class="ticker-item">Machine Learning</span>
+
+
+
+      <span class="ticker-item">AWS</span>
+
+
+
+      <span class="ticker-item">DynamoDB</span>
+
+
+
+      <span class="ticker-item">SQL</span>
+
+
+
+      <span class="ticker-item">Power BI</span>
+
+
+
+      <span class="ticker-item">C</span>
+
+
+
+      <span class="ticker-item">JavaScript</span>
+
+
+
+      <span class="ticker-item">Git</span>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <!-- ABOUT -->
+
+
+
+  <section id="about">
+
+
+
+    <div class="container">
+
+
+
+      <div class="section-label reveal">
+
+        01 — About Me
+
+      </div>
+
+
+
+      <div class="about-grid">
+
+
+
+        <div class="reveal">
+
+
+
+          <h2 class="section-title">
+
+            Building with<br>
+
+            logic & data.
+
+          </h2>
+
+
+
+          <div class="about-copy">
+
+
+
+            <p>
+
+              I'm Soham Waman, a Computer Engineering
+
+              student interested in Artificial Intelligence,
+
+              Machine Learning, software development,
+
+              and cloud-connected systems.
+
+            </p>
+
+
+
+            <p>
+
+              I enjoy turning real-world problems into
+
+              practical software — from data analysis and
+
+              predictive maintenance to web applications
+
+              and database-driven systems.
+
+            </p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="stats reveal">
+
+
+
+          <div class="stat">
+
+            <strong>AI/ML</strong>
+
+            <span>Focus Area</span>
+
+          </div>
+
+
+
+          <div class="stat">
+
+            <strong>AWS</strong>
+
+            <span>Cloud</span>
+
+          </div>
+
+
+
+          <div class="stat">
+
+            <strong>SQL</strong>
+
+            <span>Data</span>
+
+          </div>
+
+
+
+          <div class="stat">
+
+            <strong>∞</strong>
+
+            <span>Learning</span>
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- ECOSYSTEM -->
+
+
+
+  <section id="ecosystem">
+
+
+
+    <div class="container">
+
+
+
+      <div class="section-label reveal">
+
+        02 — Ecosystem
+
+      </div>
+
+
+
+      <h2 class="section-title reveal">
+
+        Things I<br>
+
+        work with.
+
+      </h2>
+
+
+
+      <div class="cards">
+
+
+
+        <a class="card reveal"
+
+           href="https://github.com/"
+
+           target="_blank">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              01
+
+            </div>
+
+
+
+            <h3>
+
+              GitHub
+
+            </h3>
+
+
+
+            <p>
+
+              Code, experiments, academic projects
+
+              and development work.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            Open GitHub ↗
+
+          </div>
+
+
+
+        </a>
+
+
+
+
+
+        <a class="card reveal"
+
+           href="https://www.linkedin.com/"
+
+           target="_blank">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              02
+
+            </div>
+
+
+
+            <h3>
+
+              LinkedIn
+
+            </h3>
+
+
+
+            <p>
+
+              Professional profile, achievements,
+
+              learning and networking.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            Open LinkedIn ↗
+
+          </div>
+
+
+
+        </a>
+
+
+
+
+
+        <a class="card reveal"
+
+           href="#projects">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              03
+
+            </div>
+
+
+
+            <h3>
+
+              Projects
+
+            </h3>
+
+
+
+            <p>
+
+              Machine learning, data warehousing,
+
+              software engineering and cloud projects.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            View Projects ↓
+
+          </div>
+
+
+
+        </a>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- PROJECTS -->
+
+
+
+  <section id="projects">
+
+
+
+    <div class="container">
+
+
+
+      <div class="section-label reveal">
+
+        03 — Selected Work
+
+      </div>
+
+
+
+      <h2 class="section-title reveal">
+
+        Projects that<br>
+
+        solve problems.
+
+      </h2>
+
+
+
+      <div class="cards">
+
+
+
+        <article class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              01
+
+            </div>
+
+
+
+            <h3>
+
+              Machine Maintenance ML
+
+            </h3>
+
+
+
+            <p>
+
+              AWS-connected sensor analytics concept
+
+              for detecting abnormal machine vibration
+
+              and supporting predictive maintenance.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            AI / ML • AWS
+
+          </div>
+
+
+
+        </article>
+
+
+
+
+
+        <article class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              02
+
+            </div>
+
+
+
+            <h3>
+
+              Vehicle Sales Warehouse
+
+            </h3>
+
+
+
+            <p>
+
+              Data warehouse with fact and dimension
+
+              tables, analytical SQL queries, OLAP
+
+              operations and Power BI visualizations.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            SQL • OLAP • Power BI
+
+          </div>
+
+
+
+        </article>
+
+
+
+
+
+        <article class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              03
+
+            </div>
+
+
+
+            <h3>
+
+              GraphGotham
+
+            </h3>
+
+
+
+            <p>
+
+              A GraphRAG-powered financial investigation
+
+              system designed for structured investigation
+
+              workflows.
+
+            </p>
+
+
+
+          </div>
+
+
+
+          <div class="launch">
+
+            GraphRAG • Software Engineering
+
+          </div>
+
+
+
+        </article>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- SKILLS -->
+
+
+
+  <section id="skills">
+
+
+
+    <div class="container">
+
+
+
+      <div class="section-label reveal">
+
+        04 — Skills
+
+      </div>
+
+
+
+      <h2 class="section-title reveal">
+
+        My toolkit.
+
+      </h2>
+
+
+
+      <div class="cards">
+
+
+
+        <div class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              01
+
+            </div>
+
+
+
+            <h3>
+
+              Languages
+
+            </h3>
+
+
+
+            <p>
+
+              Python • C • JavaScript • SQL
+
+            </p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              02
+
+            </div>
+
+
+
+            <h3>
+
+              AI / Data
+
+            </h3>
+
+
+
+            <p>
+
+              Machine Learning • Data Analysis •
+
+              LSTM • Power BI
+
+            </p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="card reveal">
+
+
+
+          <div>
+
+
+
+            <div class="card-num">
+
+              03
+
+            </div>
+
+
+
+            <h3>
+
+              Cloud / Tools
+
+            </h3>
+
+
+
+            <p>
+
+              AWS • DynamoDB • Git • GitHub • Supabase
+
+            </p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- CONTACT -->
+
+
+
+  <section id="contact">
+
+
+
+    <div class="container">
+
+
+
+      <div class="section-label reveal">
+
+        05 — Get In Touch
+
+      </div>
+
+
+
+      <div class="contact-grid">
+
+
+
+        <div class="reveal">
+
+
+
+          <h2 class="section-title">
+
+            Let's build<br>
+
+            something.
+
+          </h2>
+
+
+
+          <p class="contact-copy">
+
+            I'm open to internships, collaborations,
+
+            academic projects and interesting technical ideas.
+
+          </p>
+
+
+
+          <div class="contact-links">
+
+
+
+            <a href="mailto:your.email@example.com">
+
+              your.email@example.com ↗
+
+            </a>
+
+
+
+            <a href="https://github.com/"
+
+               target="_blank">
+
+              GitHub ↗
+
+            </a>
+
+
+
+            <a href="https://www.linkedin.com/"
+
+               target="_blank">
+
+              LinkedIn ↗
+
+            </a>
+
+
+
+            <span>
+
+              India
+
+            </span>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+        <form onsubmit="sendMessage(event)">
+
+
+
+          <input
+
+            id="name"
+
+            type="text"
+
+            placeholder="Your Name"
+
+            required
+
+          >
+
+
+
+          <input
+
+            id="email"
+
+            type="email"
+
+            placeholder="Your Email"
+
+            required
+
+          >
+
+
+
+          <input
+
+            id="subject"
+
+            type="text"
+
+            placeholder="Subject"
+
+            required
+
+          >
+
+
+
+          <textarea
+
+            id="message"
+
+            placeholder="Message"
+
+            required
+
+          ></textarea>
+
+
+
+          <button
+
+            class="btn primary"
+
+            type="submit">
+
+
+
+            Send Message ↗
+
+
+
+          </button>
+
+
+
+        </form>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+
+
+
+  <footer>
+
+
+
+    <div class="container"
+
+         style="display:flex;justify-content:space-between;gap:20px">
+
+
+
+      <span>
+
+        Soham Waman © 2026
+
+      </span>
+
+
+
+      <span>
+
+        Built with curiosity & code.
+
+      </span>
+
+
+
+    </div>
+
+
+
+  </footer>
+
+
+
+
+
+  <script>
+
+
+
+    const observer =
+
+      new IntersectionObserver(
+
+        entries => {
+
+
+
+          entries.forEach(e => {
+
+
+
+            if (e.isIntersecting) {
+
+
+
+              e.target.classList.add("show");
+
+
+
+            }
+
+
+
+          });
+
+
+
+        },
+
+        {
+
+          threshold: .12
+
+        }
+
+      );
+
+
+
+    document
+
+      .querySelectorAll(".reveal")
+
+      .forEach(el => observer.observe(el));
+
+
+
+
+
+    function sendMessage(e) {
+
+
+
+      e.preventDefault();
+
+
+
+      const name =
+
+        document.getElementById("name").value;
+
+
+
+      const email =
+
+        document.getElementById("email").value;
+
+
+
+      const subject =
+
+        document.getElementById("subject").value;
+
+
+
+      const message =
+
+        document.getElementById("message").value;
+
+
+
+      const body =
+
+        encodeURIComponent(
+
+          `Name: ${name}\nEmail: ${email}\n\n${message}`
+
+        );
+
+
+
+      window.location.href =
+
+        `mailto:your.email@example.com?subject=${
+
+          encodeURIComponent(subject)
+
+        }&body=${body}`;
+
+
+
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
+which language you have usen here ?
